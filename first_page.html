@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wonder</title>
+	</head>
+	<body>
+		<form action="second_page.html">
+			<h1>Basic Details</h1>
+			<label>First Name:</label><input id="fname" type="text" required><br>
+			<label>Last Name:</label><input id="lname" type="text" required><br>
+			<label>Email Address:</label><input id="mail" type="email" required><br>
+			<label>Date of Birth</label><input id="dob" type="date" required><br>
+			<label>Gender<input name="gender" type="radio">Male
+			<input name="gender" type="radio">Female<br>
+			</label>
+			<input type="submit" value="Submit" onclick="dosomething();">
+		</form>
+		<br>
+	</body>
+	<script>
+		function dosomething(){
+			var firstName=document.getElementById("fname").value;
+			localStorage.setItem("first_name",firstName);
+			var lastName=document.getElementById("lname").value;
+			localStorage.setItem("last_name",lastName);
+			var mail=document.getElementById("mail").value;
+			localStorage.setItem("mail",mail);
+			var DOB=document.getElementById("dob").value;
+			localStorage.setItem("dob",DOB);
+			var gender=document.getElementsByName("gender");
+			if(gender[0].checked){
+				localStorage.setItem("gender","Male");
+			}else{
+				localStorage.setItem("gender","Female");
+			}
+			
+			return false;
+		}
+	</script>
+</html>
