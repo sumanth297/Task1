@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+		<title>ShowTime</title>
+	</head>
+	<h1>Details</h1>
+    <body>
+		First Name   :<span id="fname"></span><br>
+		Second Name  :<span id="lname"></span><br>
+		Email Address:<span id="mail"></span><br>
+		Date Of Birth:<span id="dob"></span><br>
+		Gender		 :<span id="gender"></span><br>
+    </body>
+	<script>
+			document.getElementById("fname").innerHTML=localStorage.getItem("first_name");
+			document.getElementById("lname").innerHTML=localStorage.getItem("last_name");
+			document.getElementById("mail").innerHTML=localStorage.getItem("mail");
+			document.getElementById("dob").innerHTML=localStorage.getItem("dob");
+			document.getElementById("gender").innerHTML=localStorage.getItem("gender");
+	</script>
+</html>
